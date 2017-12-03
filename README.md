@@ -10,3 +10,12 @@ This project assumes the following connection between color gates and GPIO ports
 * XIO0 (gpio1013 on Kernel 4.4) -> Green
 * XIO1 (gpio1014 on Kernel 4.4) -> Blue
 * XIO2 (gpio1015 on Kernel 4.4) -> Red
+
+
+## Environment setup
+
+```
+sudo apt-get update
+sudo apt-get install git build-essential python-dev python-pip flex bison chip-dt-overlays -y
+sudo pip install CHIP-IO
+```
