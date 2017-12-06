@@ -24,3 +24,6 @@ def setLight():
     led.setBlue(blue)
 
     return str(red)+", "+str(green)+", "+str(blue)
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
