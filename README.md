@@ -17,8 +17,18 @@ This project assumes the following connection between color gates and GPIO ports
 ```
 sudo apt-get update
 sudo apt-get install git build-essential python-dev python-pip flex bison chip-dt-overlays -y
+```
+copy code to /opt/led-controller
+```
 sudo pip install -r requirements.txt
-sudo FLASK_APP=main.py flask run --host=0.0.0.0
+sudo python main.py
+```
+
+## running as a service
+copy led-controller.service to /etc/systemd/system/
+```
+sudo systemctl daemon-reload
+sudo service led-controller start
 ```
 
 ## Setting colors

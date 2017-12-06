@@ -1,0 +1,12 @@
+[Unit]
+Description=LED controller exposed by API
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/led-controller
+ExecStart=/usr/bin/python /opt/led-controller/main.py
+
+[Install]
+WantedBy=multi-user.target
