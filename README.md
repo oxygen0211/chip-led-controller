@@ -33,5 +33,5 @@ sudo service led-controller start
 
 ## Setting colors
 ```
-curl -XPOST -H "Content-Type: application/json" --data '{"red": 1, "blue": 1, "green": 1}' http://chip-led.local:5000/
+curl -XPOST -H "Content-Type: application/json" --data '{"red": 255, "blue": 255, "green": 255}' http://chip-led.local:5000/
 ```
