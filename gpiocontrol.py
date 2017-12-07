@@ -6,7 +6,7 @@ class LED_GPIO:
         green = 'XIO-P0'
         blue = 'XIO-P1'
         red = 'XIO-P2'
-        frequency = 2500
+        frequency = 100
 
         self.green = green
         self.red = red
