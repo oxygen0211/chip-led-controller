@@ -1,2 +1,3 @@
 CHIP-IO
 Flask
+paho-mqtt
