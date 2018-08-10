@@ -1,4 +1,4 @@
-#from gpiocontrol import LED_GPIO
+from gpiocontrol import LED_GPIO
 from mqtt import MQTT
 from flask import Flask
 from flask import request
@@ -6,11 +6,11 @@ import time
 import json
 import os
 
-#led = LED_GPIO()
+led = LED_GPIO()
 
-#led.setRed(0)
-#led.setBlue(0)
-#led.setGreen(0)
+led.setRed(0)
+led.setBlue(0)
+led.setGreen(0)
 
 app = Flask(__name__)
 
@@ -26,9 +26,9 @@ def setLight():
     return str(red)+", "+str(green)+", "+str(blue)
 
 def setLightValues(red, green, blue):
-    #led.setRed(red)
-    #led.setGreen(green)
-    #led.setBlue(blue)
+    led.setRed(red)
+    led.setGreen(green)
+    led.setBlue(blue)
     mqtt.publish_rgb_state(red, green, blue)
 
 mqtt = MQTT(setLightValues)
