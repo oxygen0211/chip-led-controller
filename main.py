@@ -35,8 +35,10 @@ mqtt = MQTT(setLightValues)
 
 if __name__ == "__main__":
     mqttBroker = os.environ.get("MQTT_BROKER")
+    mqttUser = os.environ.get("MQTT_USER")
+    mqttPass = os.environ.get("MQTT_PASSWORD")
     if(mqttBroker == None):
         print("No MQTT broker set, starting in HTTP mode")
         app.run(host='0.0.0.0')
     else:
-        mqtt.connect(mqttBroker)
+        mqtt.connect(mqttBroker, mqttUser, mqttPass)

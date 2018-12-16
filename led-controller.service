@@ -3,6 +3,7 @@ Description=LED controller exposed by API
 After=network.target
 
 [Service]
+EnvironmentFile=/opt/led-controller/service.conf
 User=root
 Group=root
 WorkingDirectory=/opt/led-controller
